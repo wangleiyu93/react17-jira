@@ -1,13 +1,68 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* reset.css */
+html {
+  box-sizing: border-box; /* 设置盒模型为border-box，防止padding、margin等属性影响布局 */
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0; /* 将外边距重置为0 */
+  padding: 0; /* 将内边距重置为0 */
+}
+table {
+  border-collapse: collapse; /* 合并表格单元格的边框 */
+}
+img {
+  display: inline-block; /* 图片显示在同一行上 */
+  vertical-align: middle; /* 图片与其他元素居中对齐 */
+}
+a {
+  color: inherit; /* 继承父元素的字体颜色 */
+  text-decoration: none; /* 去除超链接的下划线效果 */
+}
+button {
+  cursor: pointer; /* 改变光标形状为手指 */
+  background: transparent; /* 按钮没有背景色 */
+  outline: none; /* 取消按钮点击时的默认边框 */
+}
+input[type="text"],
+input[type="password"] {
+  -webkit-appearance: none; /* 移除输入框的原生样式 */
+  appearance: none;
+  border: none; /* 无边框 */
+  outline: none; /* 取消输入框获得焦点后的边框 */
 }
