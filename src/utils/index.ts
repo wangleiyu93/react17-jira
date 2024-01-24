@@ -33,7 +33,7 @@ export const debounce = (func:()=>void, delay:number) => {
   };
 };
 
-export const useDebounce = (value:unknown, delay:number):any => {
+export const useDebounce = <S>(value:S, delay:number) => {
   const [debouncedValue, setDebouncedValue] = useState(value);
   useEffect(() => {
     const timeout = setTimeout(() => {
