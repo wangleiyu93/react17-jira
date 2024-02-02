@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { loadDevTools } from "jira-dev-tool";
+import { loadDevTools } from "jira-dev-tool"; //影响antd的主题色，正式环境要删掉
 import { AppProviders } from "context";
 
 loadDevTools(() => {
