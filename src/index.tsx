@@ -3,16 +3,17 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { loadDevTools } from "jira-dev-tool"; //影响antd的主题色，正式环境要删掉
+import { DevTools, loadServer } from "jira-dev-tool"; //影响antd的主题色，正式环境要删掉
 import { AppProviders } from "context";
 
-loadDevTools(() => {
+loadServer(() => {
   const root = ReactDOM.createRoot(
     document.getElementById("root") as HTMLElement,
   );
   root.render(
     <React.StrictMode>
       <AppProviders>
+        <DevTools />
         <App />
       </AppProviders>
     </React.StrictMode>,

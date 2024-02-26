@@ -4,7 +4,7 @@ import { useAuth } from "context/auth-context";
 import styled from "@emotion/styled";
 import { Row } from "components/lib";
 import { ReactComponent as SoftwareLogo } from "assets/software-logo.svg";
-import { Dropdown } from "antd";
+import { Dropdown, Button } from "antd";
 import type { MenuProps } from "antd";
 
 export const AuthenticatedApp = () => {
@@ -34,7 +34,9 @@ export const AuthenticatedApp = () => {
               onClick: DropdownOnClick,
             }}
           >
-            <a onClick={(e) => e.preventDefault()}>Hi,{user?.name}</a>
+            <Button type="link" onClick={(e) => e.preventDefault()}>
+              Hi,{user?.name}
+            </Button>
           </Dropdown>
         </HeaderRight>
       </Header>
