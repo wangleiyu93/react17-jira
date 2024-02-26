@@ -1,6 +1,7 @@
 import React from "react";
 import { User } from "./search-panel";
 import { Table } from "antd";
+import dayjs from "dayjs";
 
 interface Project {
   id: string;
@@ -8,6 +9,7 @@ interface Project {
   personId: string;
   pin: boolean;
   organization: string;
+  created: number;
 }
 
 interface ListProps {
@@ -26,11 +28,27 @@ export const List = ({ list, users }: ListProps) => {
           sorter: (a, b) => a.name.localeCompare(b.name), //String.prototype.localeCompare()方法返回一个数字，表示参考字符串在排序顺序中是在给定字符串之前、之后还是与之相同
         },
         {
+          title: "部门",
+          dataIndex: "organization",
+        },
+        {
           title: "负责人",
           render(value, project) {
             return (
               <span>
                 {users.find((user) => user.id === project.personId)?.name}
+              </span>
+            );
+          },
+        },
+        {
+          title: "创建时间",
+          render(value, project) {
+            return (
+              <span>
+                {project.created
+                  ? dayjs(project.created).format("YYYY-MM-DD")
+                  : "无"}
               </span>
             );
           },
